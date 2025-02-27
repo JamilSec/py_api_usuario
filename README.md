@@ -68,6 +68,7 @@ py_api_usuario/
     ```bash
     http://127.0.0.1:8000/docs
     ```
+    ![Ejemplo de Documentacion](https://i.ibb.co/xt7BKHwL/Docs-Swagger.png)
 
 ## Pruebas Unitarias
 - Usamos pytest para ejecutar las pruebas.
