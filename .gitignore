@@ -22,6 +22,9 @@ env/
 .env
 .envrc
 
+# Archivos
+*.csv
+
 # Archivos de logs
 *.log
 
