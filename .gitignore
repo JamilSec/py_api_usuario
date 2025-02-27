@@ -1,0 +1,45 @@
+# .gitignore para tu proyecto de FastAPI en Python
+# Ignora archivos y carpetas que no deseas commitear al repositorio.
+
+# Compilados Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Archivos y directorios de construcción / empaquetado
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Entornos virtuales
+venv/
+.env/
+env/
+.venv/
+
+# Configuraciones del entorno local
+.env
+.envrc
+
+# Archivos de logs
+*.log
+
+# Configuraciones de IDEs
+.vscode/
+.idea/
+
+# Almacenamiento en caché (pytest, mypy, etc.)
+.pytest_cache/
+.mypy_cache/
+
+# Archivos específicos de macOS
+.DS_Store
+
+# Archivos de cobertura
+.coverage
+coverage.xml
+htmlcov/
+
+# Otros
+*.sqlite3
