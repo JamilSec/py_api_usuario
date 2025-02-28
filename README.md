@@ -95,7 +95,7 @@ py_api_usuario/
 ## Buenas practicas en la nomenclatura de carpetas y archivos
 
 ### Carpetas
--**Kebab-case NO es recomendado** en carpetas (no es compatible con `import` en Python). 
+- **Kebab-case NO es recomendado** en carpetas (no es compatible con `import` en Python). 
 - Para nombrar carpetas usar snake_case (letras minúsculas con guion bajo).
 - Se deben incluir archivos __init__.py en carpetas que son paquetes Python.
 
@@ -106,10 +106,10 @@ py_api_usuario/
 | **Modelos**   | `PascalCase` | `Usuario.py`, `Producto.py` |
 | **Tests**     | `snake_case` | `test_usuario.py`, `test_producto.py` |
 
----
+
 
 Ejemplos de carpetas
--**Si representa una acción, el verbo debe ir al inicio** (`listar_usuarios`). 
+- **Si representa una acción, el verbo debe ir al inicio** (`listar_usuarios`). 
 
 ```sh
 features/
@@ -117,8 +117,8 @@ features/
  │   ├── controllers/
  │   │   ├── listar_usuarios_controller.py
 ```
----
-**Si el módulo representa una entidad (nombre descriptivo)**
+
+- **Si el módulo representa una entidad (nombre descriptivo)**
 ```sh
 features/
  ├── gestion_productos/
@@ -129,4 +129,3 @@ features/
  │   ├── models/
  │   │   ├── Producto.py
 ```
----
