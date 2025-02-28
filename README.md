@@ -91,3 +91,42 @@ py_api_usuario/
     - Ajustar tu API o infraestructura según los hallazgos.
 
     ![Ejemplo de Jmeter](https://i.ibb.co/HpFCjnmM/Jmeter.png)
+
+## Buenas practicas en la nomenclatura de carpetas y archivos
+
+### Carpetas
+-**Kebab-case NO es recomendado** en carpetas (no es compatible con `import` en Python). 
+- Para nombrar carpetas usar snake_case (letras minúsculas con guion bajo).
+- Se deben incluir archivos __init__.py en carpetas que son paquetes Python.
+
+| Tipo de Carpeta | Convención | Ejemplo |
+|----------------|------------|---------|
+| **Módulos**   | `snake_case` | `gestion_usuarios/`, `reporte_ventas/` |
+| **Servicios** | `snake_case` | `usuario_service.py`, `producto_service.py` |
+| **Modelos**   | `PascalCase` | `Usuario.py`, `Producto.py` |
+| **Tests**     | `snake_case` | `test_usuario.py`, `test_producto.py` |
+
+---
+
+Ejemplos de carpetas
+-**Si representa una acción, el verbo debe ir al inicio** (`listar_usuarios`). 
+
+```sh
+features/
+ ├── listar_usuarios/
+ │   ├── controllers/
+ │   │   ├── listar_usuarios_controller.py
+```
+---
+**Si el módulo representa una entidad (nombre descriptivo)**
+```sh
+features/
+ ├── gestion_productos/
+ │   ├── controllers/
+ │   │   ├── producto_controller.py
+ │   ├── services/
+ │   │   ├── producto_service.py
+ │   ├── models/
+ │   │   ├── Producto.py
+```
+---
