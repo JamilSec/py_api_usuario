@@ -22,20 +22,31 @@
 py_api_usuario/
 ├─ app/
 │  ├─ config/        # Configuración de la BD, etc.
+│  |  ├─ config.py   
 │  ├─ controllers/   # Controladores para la lógica de cada endpoint
+│  |  ├─ usuario.constroller.py   
 │  ├─ middlewares/   # Middlewares personalizados
+│  |  ├─ iniciosesion.middleware.py   
 │  ├─ models/        # Modelos de BD (SQLAlchemy) y Pydantic
+│  |  ├─ user_model.py   
 │  ├─ repositories/  # Lógica de acceso a datos
+│  |  ├─ user_respository.py   
 │  ├─ routes/        # Definición de endpoints (paths)
+│  |  ├─ user_routes.py   
 │  ├─ services/      # Lógica de negocio
+│  |  ├─ user_service.py   
 │  └─ utils/         # Utilidades (logging, helpers)
+│  |  ├─ logger.py
+│  ├─ __init__.py   
 ├─ tests/
-│  ├─ __init__.py
-│  └─ test_user.py   # Pruebas unitarias (pytest)
+│  ├─ user
+│  |  ├─ __init__.py
+│  |  ├─ test_user.py # Pruebas unitarias (pytest)
+│  └─ __init__.py  
 ├─ main.py           # Punto de entrada principal
-├─ requirements.txt  # Dependencias
+├─ requirements.txt  # Dependencias del proyecto
 ├─ .env              # Variables de entorno (DB, etc.)
-└─ README.md         # Este archivo
+└─ README.md         # Documentación de proyecto
 ```
 
 ## Instalación
@@ -129,3 +140,21 @@ features/
  │   ├── models/
  │   │   ├── Producto.py
 ```
+### Archivos
+- La forma correcta de nombrar los archivos en Python sigue las buenas prácticas de PEP 8, que recomiendan el uso de snake_case (letras minúsculas con guiones bajos)
+
+| Tipo de archivo     | Convención recomendada  | Ejemplo |
+|---------------------|------------------------|---------|
+| **Módulos (archivos .py)** | `snake_case.py` | `user_service.py` |
+| **Modelos** | `snake_case.py` | `user.py`, `order.py` |
+| **Esquemas (Schemas Pydantic)** | `snake_case.py` | `user_schema.py` |
+| **Rutas (FastAPI)** | `snake_case.py` | `user_routes.py` |
+| **Controladores** | `snake_case.py` | `auth_controller.py` |
+| **Servicios (Lógica de negocio)** | `snake_case.py` | `payment_service.py` |
+| **Middlewares** | `snake_case.py` | `auth_middleware.py` |
+| **Utilidades (Helpers)** | `snake_case.py` | `email_utils.py` |
+| **Configuración** | `snake_case.py` | `config.py`, `settings.py` |
+| **Archivos de Pruebas** | `test_snake_case.py` | `test_user.py` |
+| **Archivos especiales** | (`__init__.py`, `main.py`) | `__init__.py`, `main.py` |
+
+**⚠️ Nota importante:** En **Python**, los archivos con `kebab-case` (`user-service.py`) pueden generar errores al importar módulos, por lo que **se debe usar `snake_case`**.
