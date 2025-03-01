@@ -142,12 +142,12 @@ features/
  │   │   ├── Producto.py
 ```
 ### Archivos
-- Se que recomienda el uso de snake_case (letras minúsculas con guiones bajos).
-- Se usa español para nombrar los Archivos.
-- Usar el sufijo respectivo ( .service.py, .routes.py, .controller.py ).
+- Usar **snake_case** para nombrar los Archivos. (letras minúsculas con guiones bajos).
+- Usar español para nombrar los Archivos.
+- Usar el sufijo en inglés ( .service.py, .routes.py, .controller.py ).
 
-Ejemplos de archivos
-- **Si representa una acción, el verbo debe ir al inicio** (`listar_usuarios.py`). 
+Ejemplo:
+- **Si representa una acción, el verbo debe ir al inicio** (`listar_usuarios_controller.py`). 
 
 ```sh
 features/
@@ -170,4 +170,4 @@ features/
 | **Archivos de Pruebas** | `test_snake_case.py` | `test_user.py` |
 | **Archivos especiales** | (`__init__.py`, `main.py`) | `__init__.py`, `main.py` |
 
-**⚠️ Nota importante:** En **Python**, los archivos con `kebab-case` (`user-service.py`) pueden generar errores al importar módulos, por lo que **se debe usar `snake_case`**.
+**⚠️ Nota importante:** En **Python**, los archivos con `kebab-case` (`usuario-service.py`) pueden generar errores al importar módulos, por lo que **se debe usar `snake_case`**.
