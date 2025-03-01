@@ -107,8 +107,9 @@ py_api_usuario/
 
 ### Carpetas
 - **Kebab-case NO es recomendado** en carpetas (no es compatible con `import` en Python). 
-- Para nombrar carpetas usar snake_case (letras minúsculas con guion bajo).
-- Se deben incluir archivos __init__.py en carpetas que son paquetes Python.
+- Para nombrar carpetas usar **snake_case** (letras minúsculas con guion bajo).
+- Se usa inglés para nombrar las carpetas de la estructura del proyecto.
+- Se deben incluir archivos **__init__.py** en carpetas que son paquetes Python.
 
 | Tipo de Carpeta | Convención | Ejemplo |
 |----------------|------------|---------|
@@ -141,17 +142,29 @@ features/
  │   │   ├── Producto.py
 ```
 ### Archivos
-- La forma correcta de nombrar los archivos en Python sigue las buenas prácticas de PEP 8, que recomiendan el uso de snake_case (letras minúsculas con guiones bajos)
+- Se que recomienda el uso de snake_case (letras minúsculas con guiones bajos).
+- Se usa español para nombrar los Archivos.
+- Usar el sufijo respectivo ( .service.py, .routes.py, .controller.py ).
+
+Ejemplos de archivos
+- **Si representa una acción, el verbo debe ir al inicio** (`listar_usuarios.py`). 
+
+```sh
+features/
+ ├── listar_usuarios/
+ │   ├── controllers/
+ │   │   ├── listar_usuarios_controller.py
+```
 
 | Tipo de archivo     | Convención recomendada  | Ejemplo |
 |---------------------|------------------------|---------|
-| **Módulos (archivos .py)** | `snake_case.py` | `user_service.py` |
-| **Modelos** | `snake_case.py` | `user.py`, `order.py` |
-| **Esquemas (Schemas Pydantic)** | `snake_case.py` | `user_schema.py` |
-| **Rutas (FastAPI)** | `snake_case.py` | `user_routes.py` |
-| **Controladores** | `snake_case.py` | `auth_controller.py` |
-| **Servicios (Lógica de negocio)** | `snake_case.py` | `payment_service.py` |
-| **Middlewares** | `snake_case.py` | `auth_middleware.py` |
+| **Módulos (archivos .py)** | `snake_case.py` | `usuario_service.py` |
+| **Modelos** | `snake_case.py` | `usuario.py`, `orden.py` |
+| **Esquemas (Schemas Pydantic)** | `snake_case.py` | `usuario_schema.py` |
+| **Rutas (FastAPI)** | `snake_case.py` | `usuario_routes.py` |
+| **Controladores** | `snake_case.py` | `autorizar_controller.py` |
+| **Servicios (Lógica de negocio)** | `snake_case.py` | `pago_service.py` |
+| **Middlewares** | `snake_case.py` | `autorizar_middleware.py` |
 | **Utilidades (Helpers)** | `snake_case.py` | `email_utils.py` |
 | **Configuración** | `snake_case.py` | `config.py`, `settings.py` |
 | **Archivos de Pruebas** | `test_snake_case.py` | `test_user.py` |
